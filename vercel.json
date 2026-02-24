@@ -1,16 +1,10 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/dashboard/:path*",
-      "destination": "http://159.65.155.155/dashboard/:path*"
-    },
-    {
-      "source": "/t/:path*",
-      "destination": "http://159.65.155.155/t/:path*"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "http://159.65.155.155/assets/:path*"
-    }
+    { "source": "/dashboard/:path*", "destination": "http://159.65.155.155/dashboard/:path*" },
+    { "source": "/t/:slug/api/:path*", "destination": "http://159.65.155.155/t/:slug/api/:path*" },
+    { "source": "/t/:slug/chat", "destination": "/index.html" },
+    { "source": "/t/:path*", "destination": "http://159.65.155.155/t/:path*" }
   ]
 }
