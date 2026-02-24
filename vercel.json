@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/dashboard/:path*",
-      "destination": "http://159.65.155.155:8001/dashboard/:path*"
+      "destination": "http://159.65.155.155/dashboard/:path*"
     },
     {
       "source": "/t/:path*",
-      "destination": "http://159.65.155.155:8001/t/:path*"
+      "destination": "http://159.65.155.155/t/:path*"
     },
     {
       "source": "/assets/:path*",
-      "destination": "http://159.65.155.155:8001/assets/:path*"
+      "destination": "http://159.65.155.155/assets/:path*"
     }
   ]
 }
