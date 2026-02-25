@@ -1,0 +1,245 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #050505;
+  --foreground: #f0f0f0;
+  --card: #0a0a0a;
+  --card-foreground: #f0f0f0;
+  --popover: #0a0a0a;
+  --popover-foreground: #f0f0f0;
+  --primary: #dc2626;
+  --primary-foreground: #ffffff;
+  --secondary: #111111;
+  --secondary-foreground: #f0f0f0;
+  --muted: #111111;
+  --muted-foreground: #888888;
+  --accent: #dc2626;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #dc2626;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f0f0f0;
+  --sidebar-primary: #dc2626;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #111111;
+  --sidebar-accent-foreground: #f0f0f0;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #dc2626;
+}
+
+@theme inline {
+  --font-sans: var(--font-public-sans), "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: radial-gradient(1100px 800px at 10% 15%, rgba(220, 38, 38, 0.2), transparent 55%),
+      radial-gradient(900px 700px at 90% 8%, rgba(255, 255, 255, 0.03), transparent 60%),
+      radial-gradient(700px 600px at 60% 85%, rgba(255, 255, 255, 0.02), transparent 55%),
+      linear-gradient(160deg, #040404 0%, #0a0808 32%, #0a0808 65%, #050505 100%);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+  .parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  @media (max-width: 768px) {
+    .parallax-section {
+      background-attachment: scroll;
+    }
+  }
+  .hero-video-mask {
+    mask: url(#heroMaskMobile);
+    -webkit-mask: url(#heroMaskMobile);
+  }
+  @media (min-width: 768px) {
+    .hero-video-mask {
+      mask: url(#heroMask);
+      -webkit-mask: url(#heroMask);
+    }
+  }
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-reveal {
+    transform: translateY(18px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .stat-reveal.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .stat-glow {
+    display: inline-block;
+  }
+  .mechanical {
+    transition: none !important;
+    border-radius: 0 !important;
+  }
+  .mechanical:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 4px 4px 0 #000000 !important;
+  }
+  .mechanical * {
+    transition: none !important;
+  }
+  .lego-grid {
+    display: grid;
+    gap: 0;
+    border: 2px solid #ffffff;
+  }
+  .lego-widget {
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    background: #0a0a0a;
+  }
+  .widget-wide {
+    grid-column: span 4;
+  }
+  .widget-mid {
+    grid-column: span 3;
+  }
+  .widget-square {
+    grid-column: span 2;
+  }
+  .widget-tall {
+    grid-row: span 2;
+  }
+  .telemetry-value {
+    display: inline-flex;
+    gap: 0;
+    align-items: baseline;
+    font-variant-numeric: tabular-nums;
+  }
+  .telemetry-prefix {
+    margin-right: 0.2em;
+  }
+  .odometer-digit {
+    display: inline-block;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    width: 0.6em;
+  }
+  .odometer-stack {
+    display: block;
+    transform: translateY(0);
+    animation: odometer-roll 1s steps(10, end) forwards;
+  }
+  .odometer-stack span {
+    display: block;
+    height: 1em;
+  }
+  .odometer-digit[data-digit] .odometer-stack {
+    transform: translateY(calc(-1em * var(--digit)));
+  }
+  @keyframes odometer-roll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-1em * var(--digit)));
+    }
+  }
+  .sparkline {
+    width: 54px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .sparkline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0 10%,
+      #ffffff 10% 12%,
+      transparent 12% 25%,
+      #ffffff 25% 28%,
+      transparent 28% 50%,
+      #ffffff 50% 55%,
+      transparent 55% 100%
+    );
+    animation: spark 1.4s steps(6, end) infinite;
+  }
+  @keyframes spark {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  ::selection {
+    background: #dc2626;
+    color: #ffffff;
+  }
+}
