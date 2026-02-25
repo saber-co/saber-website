@@ -196,26 +196,30 @@ export function Hero() {
           </div>
         </div>
 
-        <div ref={navRef} className="absolute inset-x-0 top-0 z-20 will-change-transform">
+        <div ref={navRef} className="absolute inset-x-0 top-0 z-[60] will-change-transform">
           {/* Mobile nav */}
           <div className="flex items-center justify-between px-4 py-3 md:hidden">
             <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
             <Link
               href="#contact"
-              className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
+              className="mechanical border border-white/40 bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white hover:bg-white hover:text-black"
             >
               Book a Demo
             </Link>
           </div>
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center justify-between absolute inset-x-0 top-0 px-[2.5%] py-[2%]">
-            <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
-            <Link
-              href="#contact"
-              className="mechanical border border-white/40 bg-transparent px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white hover:bg-white hover:text-black"
-            >
-              Book a Demo
-            </Link>
+          <div className="hidden md:block">
+            <div className="absolute left-0 top-0 p-3">
+              <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
+            </div>
+            <div className="absolute right-0 top-0 p-3">
+              <Link
+                href="#contact"
+                className="mechanical border border-white/40 bg-transparent px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white hover:bg-white hover:text-black"
+              >
+                Book a Demo
+              </Link>
+            </div>
           </div>
         </div>
       </div>
