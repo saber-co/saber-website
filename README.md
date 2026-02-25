@@ -2,12 +2,15 @@
 
 Repo layout:
 
-- `landing/` → landing page frontend (Next.js)
-- `chat-ui/` → chat UI frontend (Vite/React)
+- `landing/` → landing page code (Next.js)
+- `chat-ui/` → chat UI code (Vite/React)
 
-Current production routing (via `vercel.json` at repo root):
+Root no longer contains duplicate landing source.
 
-- `/` serves current site deployment
-- `/dashboard/*` proxies to backend magic-link/chat flow
-- `/t/*` proxies to backend tenant chat routes
-- `/assets/*` proxies backend-served chat assets
+Production routing is controlled by root `vercel.json`:
+
+- `/dashboard/*` → backend magic-link/chat flow
+- `/t/*` → backend tenant chat routes
+- `/assets/*` → backend-served chat assets
+
+If deploying landing directly from this repo in Vercel, set **Root Directory** to `landing`.
