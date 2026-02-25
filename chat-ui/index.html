@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TENANT_NAME}} • Chat UI</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        window.__TENANT_SLUG__ = "{{TENANT_SLUG}}";
+        window.__TENANT_NAME__ = "{{TENANT_NAME}}";
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
