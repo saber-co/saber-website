@@ -208,21 +208,14 @@ export function Hero() {
             </Link>
           </div>
           {/* Desktop nav */}
-          <div className="hidden md:block">
-            <div className="absolute left-[1.5%] top-[1.5%]">
-              <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
-            </div>
-            <div className="absolute right-[1.5%] top-[7%]">
-              <Link
-                href="#contact"
-                className="inline-flex items-center justify-center px-5 py-2 text-xs font-medium uppercase tracking-[0.15em] text-white/80 hover:text-white transition-colors"
-              >
-                Book a Demo
-                <svg className="ml-2 h-3 w-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </div>
+          <div className="hidden md:flex items-center justify-between absolute inset-x-0 top-0 px-[2.5%] py-[2%]">
+            <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
+            <Link
+              href="#contact"
+              className="mechanical border border-white/40 bg-transparent px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white hover:bg-white hover:text-black"
+            >
+              Book a Demo
+            </Link>
           </div>
         </div>
       </div>
