@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -8,38 +9,38 @@ gsap.registerPlugin(ScrollTrigger)
 
 const features = [
   {
-    title: "Workflow automation across teams",
-    description: "Connect ops, finance, and support into a single automation spine.",
-    image: "/capabilities/workflow.svg",
+    title: "Inbound call handling",
+    description: "Saber answers calls in natural language, qualifies leads, books meetings, and escalates to your team — 24/7, zero hold time.",
+    image: "/capabilities/chatops.svg",
     area: "a",
   },
   {
-    title: "Chatbot-first ops support",
-    description: "A single interface that routes work, approvals, and answers.",
-    image: "/capabilities/chatops.svg",
+    title: "Live chat & messaging",
+    description: "Engage website visitors and support tickets instantly. Saber resolves common issues and routes complex ones to the right person.",
+    image: "/capabilities/integrations.svg",
     area: "b",
   },
   {
-    title: "Fast integration with existing tools",
-    description: "Plug into your current stack without replatforming.",
-    image: "/capabilities/integrations.svg",
+    title: "Multi-step workflow automation",
+    description: "Chain tasks across CRM, email, Slack, and internal tools. One trigger fires a complete process — no manual hand-offs.",
+    image: "/capabilities/workflow.svg",
     area: "c",
   },
   {
-    title: "Custom SOP encoding",
-    description: "Translate your best processes into reliable automation.",
+    title: "Browser actions & data entry",
+    description: "Saber navigates web apps, fills forms, pulls data, and completes repetitive browser tasks your team shouldn't be doing.",
     image: "/capabilities/sop.svg",
     area: "d",
   },
   {
-    title: "Real-time reporting + audit trails",
-    description: "Track every automation decision with clean visibility.",
+    title: "Automated follow-ups",
+    description: "No lead goes cold. Saber sends timely follow-up emails, SMS, and Slack nudges based on your playbook.",
     image: "/capabilities/reporting.svg",
     area: "e",
   },
   {
     title: "Human-in-the-loop approvals",
-    description: "Add checkpoints where decisions still need people.",
+    description: "Saber handles the work, but your team stays in control. Approval checkpoints for anything that needs a human call.",
     image: "/capabilities/approvals.svg",
     area: "f",
   },
@@ -97,19 +98,28 @@ export function FeatureBubblesSection() {
       className="parallax-section relative px-6 pt-16 pb-32 md:px-12 lg:px-20"
       style={{
         background:
-          "radial-gradient(1000px 700px at 5% 0%, rgba(255,255,255,0.025), transparent 55%), radial-gradient(900px 700px at 95% 50%, rgba(220,38,38,0.16), transparent 55%), linear-gradient(180deg, rgba(8,6,6,1) 0%, rgba(6,5,5,1) 100%)",
+          "radial-gradient(1000px 700px at 5% 0%, rgba(255,255,255,0.025), transparent 55%), radial-gradient(900px 700px at 95% 50%, rgba(220,38,38,0.16), transparent 55%), linear-gradient(180deg, rgba(6,5,5,1) 0%, rgba(6,5,5,1) 100%)",
       }}
     >
       <div ref={contentRef} className="mx-auto max-w-6xl">
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              Capabilities
+              What Saber Does
             </p>
-            <h2 className="mt-3 text-balance text-3xl md:text-4xl font-semibold tracking-tight text-white">
-              Built to automate, tuned to your operations.
+            <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
+              Six capabilities. One operator.
             </h2>
+            <p className="mt-4 max-w-lg text-sm/relaxed text-white/45">
+              Each capability runs autonomously, escalates intelligently, and logs every action for your audit trail.
+            </p>
           </div>
+          <Link
+            href="#contact"
+            className="mechanical inline-flex items-center justify-center border-2 border-white/90 bg-[#0a0a0a] px-8 py-3 text-xs font-semibold uppercase tracking-wider text-white self-start md:self-auto"
+          >
+            See it in action
+          </Link>
         </div>
 
         {/* Mobile: 2-col uniform grid */}
@@ -138,7 +148,7 @@ export function FeatureBubblesSection() {
           className="lego-grid mt-12 hidden md:grid md:grid-cols-6"
           style={{
             gridTemplateAreas: `"a a b b c c" "d d d e e f"`,
-            gridAutoRows: "240px",
+            gridAutoRows: "260px",
           }}
         >
           {features.map((feature, index) => (
@@ -154,7 +164,7 @@ export function FeatureBubblesSection() {
               <h3 className="text-base font-semibold uppercase tracking-[0.08em] text-white group-hover:text-black">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-xs text-white/60 group-hover:text-black/80">
+              <p className="mt-2 text-xs/relaxed text-white/60 group-hover:text-black/80">
                 {feature.description}
               </p>
             </div>

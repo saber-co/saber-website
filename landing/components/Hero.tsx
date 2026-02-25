@@ -18,7 +18,6 @@ export function Hero() {
     if (!sectionRef.current) return
 
     const ctx = gsap.context(() => {
-      // Video scales down and fades as you scroll away from hero
       if (videoContainerRef.current) {
         gsap.to(videoContainerRef.current, {
           scrollTrigger: {
@@ -33,7 +32,6 @@ export function Hero() {
         })
       }
 
-      // Card content slides down and fades out
       if (contentRef.current) {
         gsap.to(contentRef.current, {
           scrollTrigger: {
@@ -48,7 +46,6 @@ export function Hero() {
         })
       }
 
-      // Nav fades out
       if (navRef.current) {
         gsap.to(navRef.current, {
           scrollTrigger: {
@@ -78,7 +75,6 @@ export function Hero() {
     >
       <svg width="0" height="0" style={{ position: "absolute" }}>
         <defs>
-          {/* Desktop mask — y values sized for landscape viewport */}
           <mask id="heroMask" maskContentUnits="objectBoundingBox">
             <rect width="1" height="1" fill="black" />
             <path
@@ -86,7 +82,6 @@ export function Hero() {
               fill="white"
             />
           </mask>
-          {/* Mobile mask — y values × 0.3 to compensate for portrait aspect ratio */}
           <mask id="heroMaskMobile" maskContentUnits="objectBoundingBox">
             <rect width="1" height="1" fill="black" />
             <path
@@ -130,7 +125,7 @@ export function Hero() {
           />
         </svg>
 
-        {/* Mobile border overlay — same shape, y values × 0.3 */}
+        {/* Mobile border overlay */}
         <svg
           className="pointer-events-none absolute inset-0 z-[50] block md:hidden"
           viewBox="0 0 1 1"
@@ -147,7 +142,6 @@ export function Hero() {
           />
         </svg>
 
-
         <div
           ref={contentRef}
           className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center will-change-transform"
@@ -156,62 +150,70 @@ export function Hero() {
             ref={cardRef}
             className="relative w-full max-w-[min(84rem,96vw)] overflow-hidden border-2 border-white/90 bg-[#0a0a0a] transition-none"
           >
-
             <div className="relative flex flex-col items-center px-6 py-12 text-center sm:px-10 sm:py-16 md:px-24 md:py-20">
+              {/* Eyebrow */}
+              <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.4em] text-red-500/90 sm:text-xs">
+                AI Operator for Business &mdash; Powered by OpenClaw
+              </p>
 
               {/* Headline */}
-              <h1 className="max-w-4xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
-                Automate your ops.{" "}
+              <h1 className="max-w-5xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
+                Your entire operations team.{" "}
                 <br />
-                <span className="text-white/35">Ship without the overhead.</span>
+                <span className="text-white/35">One AI operator.</span>
               </h1>
 
               {/* Description */}
-              <p className="mt-6 max-w-lg text-sm/relaxed text-white/45 sm:text-base/relaxed lg:text-lg/relaxed">
-                Powerful workflow automation built for speed — configured to fit exactly how your team works.
+              <p className="mt-6 max-w-2xl text-sm/relaxed text-white/50 sm:text-base/relaxed lg:text-lg/relaxed">
+                Saber handles inbound calls, live chat, multi-step workflows, browser actions, and follow-ups &mdash; then hands off to a human when approval is needed. No missed leads. No dropped balls.
               </p>
 
-              {/* CTA */}
-              <div className="relative mt-8">
+              {/* CTAs */}
+              <div className="relative mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-40 w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/35 blur-3xl" />
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/30 blur-2xl" />
                 <Link
                   href="#contact"
-                  className="mechanical relative inline-flex items-center justify-center bg-white px-20 py-5 text-sm font-semibold uppercase tracking-wider text-black"
+                  className="mechanical relative inline-flex items-center justify-center bg-white px-14 py-5 text-sm font-semibold uppercase tracking-wider text-black sm:px-20"
                 >
-                  Sign Up
+                  Book a Demo
+                </Link>
+                <Link
+                  href="#contact"
+                  className="mechanical relative inline-flex items-center justify-center border-2 border-white/90 bg-[#0a0a0a] px-10 py-5 text-sm font-semibold uppercase tracking-wider text-white sm:px-16"
+                >
+                  Get My Workflow Audit
                 </Link>
               </div>
 
-              {/* Bottom feature strip — hidden on small screens */}
+              {/* Bottom feature strip */}
               <div className="mt-12 hidden w-full items-center gap-4 border-t border-white/[0.08] pt-5 sm:flex">
-                {["Workflows", "Integrations", "Reporting", "Access Control", "Audit Logs"].map((label, i) => (
+                {["Calls", "Live Chat", "Workflows", "Browser Actions", "Follow-ups", "Human Approval"].map((label, i) => (
                   <span
                     key={label}
                     className="flex-1 text-center font-mono text-[9px] uppercase tracking-[0.3em] text-white/22"
                   >
-                    {i > 0 && <span className="mr-4 text-white/12">·</span>}
+                    {i > 0 && <span className="mr-4 text-white/12">&middot;</span>}
                     {label}
                   </span>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
 
         <div ref={navRef} className="absolute inset-x-0 top-0 z-20 will-change-transform">
-          {/* Mobile: flex row to prevent overlap */}
+          {/* Mobile nav */}
           <div className="flex items-center justify-between px-4 py-3 md:hidden">
             <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
             <Link
               href="#contact"
               className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
             >
-              Sign Up
+              Book a Demo
             </Link>
           </div>
-          {/* Desktop: absolute items aligned to mask notches */}
+          {/* Desktop nav */}
           <div className="hidden md:block">
             <div className="absolute left-[1.5%] top-[1.5%]">
               <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
@@ -221,7 +223,7 @@ export function Hero() {
                 href="#contact"
                 className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
               >
-                Sign Up
+                Book a Demo
               </Link>
             </div>
           </div>

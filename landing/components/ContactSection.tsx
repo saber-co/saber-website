@@ -17,7 +17,6 @@ export function ContactSection() {
     if (!sectionRef.current) return
 
     const ctx = gsap.context(() => {
-      // Heading block scrubs in
       if (headingBlockRef.current) {
         gsap.fromTo(
           headingBlockRef.current,
@@ -36,7 +35,6 @@ export function ContactSection() {
         )
       }
 
-      // Form scrubs in slightly later
       if (formRef.current) {
         gsap.fromTo(
           formRef.current,
@@ -71,7 +69,7 @@ export function ContactSection() {
       className="parallax-section relative flex min-h-screen flex-col px-6 pt-20 pb-14 md:px-12 lg:px-20"
       style={{
         background:
-          "radial-gradient(1000px 900px at 50% 50%, rgba(220,38,38,0.18), transparent 65%), radial-gradient(600px 400px at 50% 0%, rgba(255,255,255,0.03), transparent 60%), linear-gradient(180deg, rgba(6,5,5,1) 0%, rgba(4,4,4,1) 100%)",
+          "radial-gradient(1000px 900px at 50% 50%, rgba(220,38,38,0.18), transparent 65%), radial-gradient(600px 400px at 50% 0%, rgba(255,255,255,0.03), transparent 60%), linear-gradient(180deg, rgba(5,5,5,1) 0%, rgba(4,4,4,1) 100%)",
       }}
     >
       {/* Top divider */}
@@ -80,14 +78,21 @@ export function ContactSection() {
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div ref={headingBlockRef}>
           <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-4">
-            Contact
+            Get Started
           </p>
-          <h2 className="text-balance text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-5">
-            Build your automation layer.
+          <h2 className="text-balance text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-3">
+            Book your demo. See it live.
           </h2>
-          <p className="text-base text-white/55 mb-12 font-mono leading-relaxed">
-            Share the workflows you want to streamline. We&apos;ll propose a clean OpenClaw rollout.
+          <p className="text-base text-white/55 mb-4 font-mono leading-relaxed">
+            Tell us your biggest operational bottleneck. We&apos;ll show you exactly how Saber handles it &mdash; with a custom walkthrough using your real workflows.
           </p>
+          <div className="mb-10 flex flex-wrap gap-x-6 gap-y-2 text-[11px] uppercase tracking-[0.2em] text-white/30 font-mono">
+            <span>Free workflow audit included</span>
+            <span>&middot;</span>
+            <span>Live in 7 days</span>
+            <span>&middot;</span>
+            <span>No commitment</span>
+          </div>
         </div>
 
         <form
@@ -103,8 +108,8 @@ export function ContactSection() {
                 name="name"
                 type="text"
                 required
-                placeholder="Name"
-                className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none"
+                placeholder="Your name"
+                className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none focus:border-red-500/60"
               />
             </div>
             <div>
@@ -114,45 +119,45 @@ export function ContactSection() {
                 name="company"
                 type="text"
                 required
-                placeholder="Company Name"
-                className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none"
+                placeholder="Company name"
+                className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none focus:border-red-500/60"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="email" className="sr-only">Email</label>
+            <label htmlFor="email" className="sr-only">Work Email</label>
             <input
               id="email"
               name="email"
               type="email"
               required
-              placeholder="Email"
-              className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none"
+              placeholder="Work email"
+              className="w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none focus:border-red-500/60"
             />
           </div>
 
           <div className="flex flex-1 flex-col">
-            <label htmlFor="challenge" className="sr-only">Problem You Want to Solve</label>
+            <label htmlFor="challenge" className="sr-only">Biggest operational bottleneck</label>
             <textarea
               id="challenge"
               name="challenge"
               required
-              placeholder="Problem you want to solve"
-              className="flex-1 w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none resize-none"
+              placeholder="What's your biggest operational bottleneck? (e.g., slow lead response, manual data entry, after-hours coverage)"
+              className="flex-1 w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none focus:border-red-500/60 resize-none"
             />
           </div>
 
           <div className="flex flex-col gap-3">
             <button
               type="submit"
-              className="mechanical w-full border-2 border-white/90 bg-[#0a0a0a] px-6 py-5 text-base font-semibold text-white"
+              className="mechanical w-full border-2 border-white/90 bg-white px-6 py-5 text-base font-semibold text-black"
             >
-              Sign Up
+              Book a Demo
             </button>
             {submitted ? (
               <p className="text-sm text-white/50">
-                Thanks — your information has been recorded.
+                We&apos;ve received your request. A Saber team member will reach out within 24 hours with your custom workflow audit.
               </p>
             ) : null}
           </div>

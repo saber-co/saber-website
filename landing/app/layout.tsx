@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Saber | Automate at Scale",
-  description: "Architecting bespoke OpenClaw implementations to eliminate operational friction.",
+  title: "Saber | AI Operator for Business — Calls, Chat, Workflows & More",
+  description: "Saber is the AI operator that handles calls, chat, workflows, browser actions, and follow-ups for your business — with human approval when it matters. Powered by OpenClaw.",
 }
 
 export default function RootLayout({
