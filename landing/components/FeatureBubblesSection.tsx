@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const features = [
   {
-    title: "Inbound call handling",
-    description: "Saber answers calls in natural language, qualifies leads, books meetings, and escalates to your team — 24/7, zero hold time.",
+    title: "OpenClaw deployment in your stack",
+    description: "We architect and implement OpenClaw in your own infrastructure with your security model and integrations.",
     image: "/capabilities/chatops.svg",
     area: "a",
   },
   {
-    title: "Live chat & messaging",
-    description: "Engage website visitors and support tickets instantly. Saber resolves common issues and routes complex ones to the right person.",
+    title: "Live chat & messaging operations",
+    description: "Engage website visitors and support tickets instantly. OpenClaw handles common issues and routes complex cases to the right person.",
     image: "/capabilities/integrations.svg",
     area: "b",
   },
@@ -105,13 +105,13 @@ export function FeatureBubblesSection() {
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              What Saber Does
+              What Saber does
             </p>
             <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
-              Six capabilities. One operator.
+              We implement OpenClaw for your team, not as hosted SaaS.
             </h2>
             <p className="mt-4 max-w-lg text-sm/relaxed text-white/45">
-              Each capability runs autonomously, escalates intelligently, and logs every action for your audit trail.
+              Each capability runs in your environment, escalates intelligently, and logs every action for your audit trail.
             </p>
           </div>
           <Link

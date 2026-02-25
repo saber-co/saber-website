@@ -153,19 +153,19 @@ export function Hero() {
             <div className="relative flex flex-col items-center px-6 py-12 text-center sm:px-10 sm:py-16 md:px-24 md:py-20">
               {/* Eyebrow */}
               <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.4em] text-red-500/90 sm:text-xs">
-                AI Operator for Business &mdash; Powered by OpenClaw
+                OpenClaw Implementation Partner
               </p>
 
               {/* Headline */}
               <h1 className="max-w-5xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
-                Your entire operations team.{" "}
+                OpenClaw deployed for your business.{" "}
                 <br />
-                <span className="text-white/35">One AI operator.</span>
+                <span className="text-white/35">In your environment, not ours.</span>
               </h1>
 
               {/* Description */}
               <p className="mt-6 max-w-2xl text-sm/relaxed text-white/50 sm:text-base/relaxed lg:text-lg/relaxed">
-                Saber handles inbound calls, live chat, multi-step workflows, browser actions, and follow-ups &mdash; then hands off to a human when approval is needed. No missed leads. No dropped balls.
+                Saber implements OpenClaw operators for inbound calls, live chat, multi-step workflows, browser actions, and follow-ups &mdash; with approvals where needed. You keep infrastructure, credentials, and control.
               </p>
 
               {/* CTA */}
@@ -182,7 +182,7 @@ export function Hero() {
 
               {/* Bottom feature strip */}
               <div className="mt-12 hidden w-full items-center gap-4 border-t border-white/[0.08] pt-5 sm:flex">
-                {["Calls", "Live Chat", "Workflows", "Browser Actions", "Follow-ups", "Human Approval"].map((label, i) => (
+                {["OpenClaw Setup", "Your Infra", "Calls", "Live Chat", "Workflows", "Human Approval"].map((label, i) => (
                   <span
                     key={label}
                     className="flex-1 text-center font-mono text-[9px] uppercase tracking-[0.3em] text-white/22"

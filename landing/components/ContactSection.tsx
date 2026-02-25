@@ -78,13 +78,13 @@ export function ContactSection() {
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div ref={headingBlockRef}>
           <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-4">
-            Get Started
+            Implementation inquiry
           </p>
           <h2 className="text-balance text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-3">
-            Book your demo. See it live.
+            Book your OpenClaw implementation call.
           </h2>
           <p className="text-base text-white/55 mb-4 font-mono leading-relaxed">
-            Tell us your biggest operational bottleneck. We&apos;ll show you exactly how Saber handles it &mdash; with a custom walkthrough using your real workflows.
+            Tell us your biggest operational bottleneck. We&apos;ll show you exactly how we implement OpenClaw for your workflows in your own environment.
           </p>
           <div className="mb-10 flex flex-wrap gap-x-6 gap-y-2 text-[11px] uppercase tracking-[0.2em] text-white/30 font-mono">
             <span>Free workflow audit included</span>
@@ -153,11 +153,11 @@ export function ContactSection() {
               type="submit"
               className="mechanical w-full border-2 border-white/90 bg-white px-6 py-5 text-base font-semibold text-black"
             >
-              Book a Demo
+Book Implementation Call
             </button>
             {submitted ? (
               <p className="text-sm text-white/50">
-                We&apos;ve received your request. A Saber team member will reach out within 24 hours with your custom workflow audit.
+We&apos;ve received your request. A Saber team member will reach out with your OpenClaw implementation plan.
               </p>
             ) : null}
           </div>

@@ -22,11 +22,11 @@ const stats = [
     source: "Automation Anywhere",
   },
   {
-    value: 3,
-    suffix: "x",
+    value: 100,
+    suffix: "%",
     decimals: 0,
-    label: "faster first-response time with AI-powered operations",
-    source: "Saber Pilot Data",
+    label: "OpenClaw deployed in your own environment and controls",
+    source: "Saber Implementation Standard",
   },
 ]
 
