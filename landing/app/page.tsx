@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero"
 import { StatsSection } from "@/components/StatsSection"
+import { TweetsMarqueeSection } from "@/components/TweetsMarqueeSection"
 import { FeatureBubblesSection } from "@/components/FeatureBubblesSection"
 import { ContactSection } from "@/components/ContactSection"
 
@@ -8,6 +9,7 @@ export default function Home() {
     <main className="min-h-screen" style={{ background: "#050505" }}>
       <Hero />
       <StatsSection />
+      <TweetsMarqueeSection />
       <FeatureBubblesSection />
       <ContactSection />
     </main>

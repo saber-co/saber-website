@@ -8,29 +8,30 @@ gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
   {
+    value: 87,
+    suffix: "%",
+    decimals: 0,
+    label: "of leads lost due to response times over 5 minutes",
+    source: "Harvard Business Review",
+  },
+  {
     value: 4.5,
     suffix: " hrs",
     decimals: 1,
-    label: "per week lost on tasks workers say could be automated",
+    label: "per week wasted on tasks employees say should be automated",
+    source: "Automation Anywhere",
   },
   {
-    value: 29.8,
-    suffix: "%",
-    decimals: 1,
-    label: "avg cost reduction from business process automation (RPA)",
-  },
-  {
-    value: 20,
+    value: 100,
     suffix: "%",
     decimals: 0,
-    prefix: "Upto ",
-    label: "productivity lift from workflow automation",
+    label: "OpenClaw deployed in your own environment and controls",
+    source: "Saber Implementation Standard",
   },
 ]
 
 export function StatsSection() {
   const [animateDigits, setAnimateDigits] = useState(false)
-  const [revealed, setRevealed] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
   const hasAnimated = useRef(false)
@@ -43,7 +44,6 @@ export function StatsSection() {
         const entry = entries[0]
         if (!entry.isIntersecting || hasAnimated.current) return
         hasAnimated.current = true
-        setRevealed(true)
         setAnimateDigits(true)
       },
       { threshold: 0.4 },
@@ -77,13 +77,12 @@ export function StatsSection() {
     return () => ctx.revert()
   }, [])
 
-  const renderOdometer = (stat: typeof stats[number]) => {
+  const renderOdometer = (stat: (typeof stats)[number]) => {
     const formatted = stat.value.toFixed(stat.decimals)
     const chars = formatted.split("")
 
     return (
       <span className="telemetry-value">
-        {stat.prefix ? <span className="telemetry-prefix">{stat.prefix}</span> : null}
         {chars.map((char, i) => {
           if (char === ".") {
             return (
@@ -126,6 +125,12 @@ export function StatsSection() {
       }}
     >
       <div className="mx-auto max-w-6xl">
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">
+          The problem
+        </p>
+        <h2 className="mb-12 max-w-2xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          Your team is losing deals while doing busywork.
+        </h2>
         <div ref={gridRef} className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {stats.map((stat) => (
             <div
@@ -141,10 +146,9 @@ export function StatsSection() {
               <p className="mt-3 text-xs uppercase tracking-[0.14em] text-white/70 group-hover:text-black/70">
                 {stat.label}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.2em] text-white/45 group-hover:text-black/60">
-                <span>[SYNC: OK]</span>
-                <span>[LATENCY: 14ms]</span>
-              </div>
+              <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-white/35 group-hover:text-black/50">
+                Source: {stat.source}
+              </p>
             </div>
           ))}
         </div>

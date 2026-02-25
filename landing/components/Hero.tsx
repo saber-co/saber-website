@@ -158,70 +158,73 @@ export function Hero() {
           >
 
             <div className="relative flex flex-col items-center px-6 py-12 text-center sm:px-10 sm:py-16 md:px-24 md:py-20">
+              {/* Eyebrow */}
+              <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.4em] text-red-500/90 sm:text-xs">
+                OpenClaw Implementation Partner
+              </p>
 
               {/* Headline */}
-              <h1 className="max-w-4xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
-                Automate your ops.{" "}
+              <h1 className="max-w-5xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
+                OpenClaw deployed for your business.{" "}
                 <br />
-                <span className="text-white/35">Ship without the overhead.</span>
+                <span className="text-white/35">In your environment, not ours.</span>
               </h1>
 
               {/* Description */}
-              <p className="mt-6 max-w-lg text-sm/relaxed text-white/45 sm:text-base/relaxed lg:text-lg/relaxed">
-                Powerful workflow automation built for speed — configured to fit exactly how your team works.
+              <p className="mt-6 max-w-2xl text-sm/relaxed text-white/50 sm:text-base/relaxed lg:text-lg/relaxed">
+                Saber implements OpenClaw operators for inbound calls, live chat, multi-step workflows, browser actions, and follow-ups &mdash; with approvals where needed. Your infrastructure, your credentials, your control.
               </p>
 
               {/* CTA */}
-              <div className="relative mt-8">
+              <div className="relative mt-10">
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-40 w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/35 blur-3xl" />
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/30 blur-2xl" />
                 <Link
                   href="#contact"
-                  className="mechanical relative inline-flex items-center justify-center bg-white px-20 py-5 text-sm font-semibold uppercase tracking-wider text-black"
+                  className="mechanical relative inline-flex items-center justify-center bg-white px-14 py-5 text-sm font-semibold uppercase tracking-wider text-black sm:px-20"
                 >
-                  Sign Up
+                  Book a Demo
                 </Link>
               </div>
 
-              {/* Bottom feature strip — hidden on small screens */}
+              {/* Bottom feature strip */}
               <div className="mt-12 hidden w-full items-center gap-4 border-t border-white/[0.08] pt-5 sm:flex">
-                {["Workflows", "Integrations", "Reporting", "Access Control", "Audit Logs"].map((label, i) => (
+                {["OpenClaw Setup", "Your Infra", "Calls", "Live Chat", "Workflows", "Human Approval"].map((label, i) => (
                   <span
                     key={label}
                     className="flex-1 text-center font-mono text-[9px] uppercase tracking-[0.3em] text-white/22"
                   >
-                    {i > 0 && <span className="mr-4 text-white/12">·</span>}
+                    {i > 0 && <span className="mr-4 text-white/12">&middot;</span>}
                     {label}
                   </span>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
 
         <div ref={navRef} className="absolute inset-x-0 top-0 z-20 will-change-transform">
-          {/* Mobile: flex row to prevent overlap */}
+          {/* Mobile nav */}
           <div className="flex items-center justify-between px-4 py-3 md:hidden">
             <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
             <Link
               href="#contact"
               className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
             >
-              Sign Up
+              Book a Demo
             </Link>
           </div>
-          {/* Desktop: absolute items aligned to mask notches */}
+          {/* Desktop nav */}
           <div className="hidden md:block">
             <div className="absolute left-[1.5%] top-[1.5%]">
               <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
             </div>
-            <div className="absolute right-[0.85%] top-[1.5%]">
+            <div className="absolute right-[10%] top-[1.5%]">
               <Link
                 href="#contact"
                 className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
               >
-                Sign Up
+                Book a Demo
               </Link>
             </div>
           </div>
