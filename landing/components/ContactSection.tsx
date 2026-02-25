@@ -80,13 +80,13 @@ export function ContactSection() {
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div ref={headingBlockRef}>
           <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-4">
-            Implementation inquiry
+            Contact
           </p>
           <h2 className="text-balance text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-5">
-            Let’s deploy OpenClaw in your environment.
+            Build your automation layer.
           </h2>
           <p className="text-base text-white/55 mb-12 font-mono leading-relaxed">
-            Tell us your workflow and constraints. We’ll send a practical implementation plan for your stack — infra, integrations, and rollout phases.
+            Share the workflows you want to streamline. We&apos;ll propose a clean OpenClaw rollout.
           </p>
         </div>
 
@@ -148,11 +148,11 @@ export function ContactSection() {
               type="submit"
               className="mechanical w-full border-2 border-white/90 bg-[#0a0a0a] px-6 py-5 text-base font-semibold text-white"
             >
-Book implementation call
+              Sign Up
             </button>
             {submitted ? (
               <p className="text-sm text-white/50">
-Thanks — we got it. We’ll follow up with next steps for your OpenClaw setup.
+                Thanks — your information has been recorded.
               </p>
             ) : null}
           </div>

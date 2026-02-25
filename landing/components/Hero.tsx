@@ -161,14 +161,14 @@ export function Hero() {
 
               {/* Headline */}
               <h1 className="max-w-4xl text-4xl/[1.08] font-semibold tracking-tight text-white sm:text-5xl/[1.08] md:text-7xl/[1.08] lg:text-[5.5rem]/[1.08]">
-                OpenClaw, set up for your business.{" "}
+                Automate your ops.{" "}
                 <br />
-                <span className="text-white/35">We implement it in your stack — not ours.</span>
+                <span className="text-white/35">Ship without the overhead.</span>
               </h1>
 
               {/* Description */}
-              <p className="mt-6 max-w-3xl text-sm/relaxed text-white/45 sm:text-base/relaxed lg:text-lg/relaxed">
-                Saber is an OpenClaw implementation partner. We design, deploy, and tune AI operators for calls, chat, workflows, and browser tasks on your own infrastructure with your access controls.
+              <p className="mt-6 max-w-lg text-sm/relaxed text-white/45 sm:text-base/relaxed lg:text-lg/relaxed">
+                Powerful workflow automation built for speed — configured to fit exactly how your team works.
               </p>
 
               {/* CTA */}
@@ -179,13 +179,13 @@ export function Hero() {
                   href="#contact"
                   className="mechanical relative inline-flex items-center justify-center bg-white px-20 py-5 text-sm font-semibold uppercase tracking-wider text-black"
                 >
-Book Call
+                  Sign Up
                 </Link>
               </div>
 
               {/* Bottom feature strip — hidden on small screens */}
               <div className="mt-12 hidden w-full items-center gap-4 border-t border-white/[0.08] pt-5 sm:flex">
-                {["OpenClaw Setup", "Your Infra", "Integrations", "Approvals", "Audit Logs"].map((label, i) => (
+                {["Workflows", "Integrations", "Reporting", "Access Control", "Audit Logs"].map((label, i) => (
                   <span
                     key={label}
                     className="flex-1 text-center font-mono text-[9px] uppercase tracking-[0.3em] text-white/22"
@@ -208,7 +208,7 @@ Book Call
               href="#contact"
               className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
             >
-              Book Call
+              Sign Up
             </Link>
           </div>
           {/* Desktop: absolute items aligned to mask notches */}
@@ -221,7 +221,7 @@ Book Call
                 href="#contact"
                 className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
               >
-                Book Call
+                Sign Up
               </Link>
             </div>
           </div>

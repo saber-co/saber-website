@@ -8,23 +8,23 @@ gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
   {
-    value: 2,
-    suffix: "-4 wks",
-    decimals: 0,
-    label: "typical timeline to deploy a production OpenClaw operator",
+    value: 4.5,
+    suffix: " hrs",
+    decimals: 1,
+    label: "per week lost on tasks workers say could be automated",
   },
   {
-    value: 100,
+    value: 29.8,
+    suffix: "%",
+    decimals: 1,
+    label: "avg cost reduction from business process automation (RPA)",
+  },
+  {
+    value: 20,
     suffix: "%",
     decimals: 0,
-    label: "deployed in your own environment, credentials, and controls",
-  },
-  {
-    value: 24,
-    suffix: "/7",
-    decimals: 0,
-    prefix: "",
-    label: "automated coverage for routine customer and ops workflows",
+    prefix: "Upto ",
+    label: "productivity lift from workflow automation",
   },
 ]
 
