@@ -168,8 +168,8 @@ export function Hero() {
                 Saber handles inbound calls, live chat, multi-step workflows, browser actions, and follow-ups &mdash; then hands off to a human when approval is needed. No missed leads. No dropped balls.
               </p>
 
-              {/* CTAs */}
-              <div className="relative mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+              {/* CTA */}
+              <div className="relative mt-10">
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-40 w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/35 blur-3xl" />
                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-20 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/30 blur-2xl" />
                 <Link
@@ -177,12 +177,6 @@ export function Hero() {
                   className="mechanical relative inline-flex items-center justify-center bg-white px-14 py-5 text-sm font-semibold uppercase tracking-wider text-black sm:px-20"
                 >
                   Book a Demo
-                </Link>
-                <Link
-                  href="#contact"
-                  className="mechanical relative inline-flex items-center justify-center border-2 border-white/90 bg-[#0a0a0a] px-10 py-5 text-sm font-semibold uppercase tracking-wider text-white sm:px-16"
-                >
-                  Get My Workflow Audit
                 </Link>
               </div>
 
@@ -218,7 +212,7 @@ export function Hero() {
             <div className="absolute left-[1.5%] top-[1.5%]">
               <span className="text-white font-sans text-lg font-bold tracking-tight">SABER</span>
             </div>
-            <div className="absolute right-[0.85%] top-[1.5%]">
+            <div className="absolute right-[10%] top-[1.5%]">
               <Link
                 href="#contact"
                 className="mechanical border-2 border-white/90 bg-[#0a0a0a] px-4 py-2 text-sm font-light uppercase tracking-[-0.01em] text-white"
