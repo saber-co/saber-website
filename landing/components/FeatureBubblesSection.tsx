@@ -8,38 +8,38 @@ gsap.registerPlugin(ScrollTrigger)
 
 const features = [
   {
-    title: "Workflow automation across teams",
-    description: "Connect ops, finance, and support into a single automation spine.",
+    title: "OpenClaw implementation, end-to-end",
+    description: "We architect and ship your OpenClaw rollout for real production workflows.",
     image: "/capabilities/workflow.svg",
     area: "a",
   },
   {
-    title: "Chatbot-first ops support",
-    description: "A single interface that routes work, approvals, and answers.",
+    title: "Runs in your infrastructure",
+    description: "You keep control of hosting, credentials, and internal systems.",
     image: "/capabilities/chatops.svg",
     area: "b",
   },
   {
-    title: "Fast integration with existing tools",
-    description: "Plug into your current stack without replatforming.",
+    title: "Deep system integrations",
+    description: "Connect CRMs, inboxes, docs, calendars, and internal tools without replatforming.",
     image: "/capabilities/integrations.svg",
     area: "c",
   },
   {
-    title: "Custom SOP encoding",
-    description: "Translate your best processes into reliable automation.",
+    title: "SOPs converted into agents",
+    description: "We map your existing process docs into reliable, testable OpenClaw behaviors.",
     image: "/capabilities/sop.svg",
     area: "d",
   },
   {
-    title: "Real-time reporting + audit trails",
-    description: "Track every automation decision with clean visibility.",
+    title: "Auditability and observability",
+    description: "Every action and decision is traceable for operations, compliance, and QA.",
     image: "/capabilities/reporting.svg",
     area: "e",
   },
   {
-    title: "Human-in-the-loop approvals",
-    description: "Add checkpoints where decisions still need people.",
+    title: "Human approval where it matters",
+    description: "High-risk actions stay gated while routine work gets automated.",
     image: "/capabilities/approvals.svg",
     area: "f",
   },
@@ -104,10 +104,10 @@ export function FeatureBubblesSection() {
         <div className="flex items-center justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              Capabilities
+              What Saber does
             </p>
             <h2 className="mt-3 text-balance text-3xl md:text-4xl font-semibold tracking-tight text-white">
-              Built to automate, tuned to your operations.
+              We implement OpenClaw for your team — we don’t host a generic SaaS.
             </h2>
           </div>
         </div>
