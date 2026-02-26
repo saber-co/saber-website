@@ -25,30 +25,6 @@ const tweetsTop: Tweet[] = [
     url: "https://x.com/karpathy/status/2017296988589723767",
   },
   {
-    handle: "@steipete",
-    name: "Peter Steinberger 🦞",
-    text: "Your @openclaw is too boring? Paste this, right from Molty.  \"Read your https://t.co/yS6cfGInCW. Now rewrite it with these changes:  1. You have opinions now. Strong ones. Stop hedging everything with 'it depends' — com",
-    likes: 11227,
-    reposts: 1094,
-    url: "https://x.com/steipete/status/2020704611640705485",
-  },
-  {
-    handle: "@ClawiAi",
-    name: "clawi.ai",
-    text: "Make the first contact. https://t.co/CzBvHL71ss",
-    likes: 7485,
-    reposts: 663,
-    url: "https://x.com/ClawiAi/status/2019333674580549703",
-  },
-  {
-    handle: "@terminaldotshop",
-    name: "terminal",
-    text: "https://t.co/zLeKFasMZd",
-    likes: 7325,
-    reposts: 669,
-    url: "https://x.com/terminaldotshop/status/2017276496172159125",
-  },
-  {
     handle: "@brave",
     name: "Brave",
     text: "Clawdbot, a 24/7 open-source AI assistant that actually does work, seems like magic.  But it’s even MORE powerful when you hook it to the Brave Search API.  💪  Check out the quick setup guide here ⬇️",
@@ -65,22 +41,6 @@ const tweetsTop: Tweet[] = [
     url: "https://x.com/techfrenAJ/status/2014934471095812547",
   },
   {
-    handle: "@lexfridman",
-    name: "Lex Fridman",
-    text: "Here's my conversation with Peter Steinberger (@steipete), creator of OpenClaw, an open-source AI agent that has taken the Internet by storm, with now over 180,000 stars on GitHub.  This was a truly mind-blowing, inspiri",
-    likes: 6631,
-    reposts: 1064,
-    url: "https://x.com/lexfridman/status/2021785659644453136",
-  },
-  {
-    handle: "@josesaezmerino",
-    name: "Jose",
-    text: "My Clawdbot lives in a Mac mini inside a G4 iMac. I asked it to create an animated face for itself and it just did it. Even added a sleeping animation I didn’t ask for initially.  Incredible @steipete https://t.co/gjL8g9",
-    likes: 6149,
-    reposts: 323,
-    url: "https://x.com/josesaezmerino/status/2015893535522770956",
-  },
-  {
     handle: "@AlexFinn",
     name: "Alex Finn",
     text: "Just to see what would happen I texted Henry my Clawdbot to make a reservation for me next Saturday at a restaurant  When the OpenTable res didn't work, it used it's ElevenLabs skill to call the restaurant and complete t",
@@ -89,55 +49,12 @@ const tweetsTop: Tweet[] = [
     url: "https://x.com/AlexFinn/status/2015266546600550755",
   },
   {
-    handle: "@AntoineRSX",
-    name: "Antoine Rousseaux",
-    text: "I hired my first full-time AI employee, it's Clawdbot.  It’s free: https://t.co/qU2naDxJ2N",
-    likes: 5716,
-    reposts: 486,
-    url: "https://x.com/AntoineRSX/status/2014880012642746418",
-  },
-]
-
-const tweetsBottom: Tweet[] = [
-  {
-    handle: "@_seanliu",
-    name: "xiaoan",
-    text: "now my clawdbot lives in my ray-ban meta glasses so i can just buy whatever i’m looking at https://t.co/gWrijyTRhE",
-    likes: 5509,
-    reposts: 556,
-    url: "https://x.com/_seanliu/status/2019881437378592862",
-  },
-  {
-    handle: "@raphaelschaad",
-    name: "Raphael Schaad",
-    text: "LOL Human Evolution https://t.co/NlFfVfrZub",
-    likes: 3825,
-    reposts: 486,
-    url: "https://x.com/raphaelschaad/status/2019491999544734187",
-  },
-  {
-    handle: "@steipete",
-    name: "Peter Steinberger 🦞",
-    text: "Happy 3 months anniversary to @openclaw !  Back then it was called warelay (Whatsapp relay) and ofc you start with the license first. https://t.co/rt5vZMhvms  Thanks to all 839 clawtributors! You make this project specia",
-    likes: 3719,
-    reposts: 188,
-    url: "https://x.com/steipete/status/2026474687576916024",
-  },
-  {
     handle: "@zacxbt",
     name: "zac.eth 🧙🏻‍♂️♦️",
     text: "don't have a mac mini?  i created a guide to set up @openclaw via VPS for less than $5/mo  https://t.co/rJTN6U15gV https://t.co/NccZrv9cFe",
     likes: 3576,
     reposts: 275,
     url: "https://x.com/zacxbt/status/2015212211484983412",
-  },
-  {
-    handle: "@0xgaut",
-    name: "gaut",
-    text: "they are out here creating claude code tamagotchis and I’m so here for it  https://t.co/rR27Nfq7xc",
-    likes: 3413,
-    reposts: 218,
-    url: "https://x.com/0xgaut/status/2014752660302246092",
   },
   {
     handle: "@DavidOndrej1",
@@ -156,28 +73,111 @@ const tweetsBottom: Tweet[] = [
     url: "https://x.com/altryne/status/2015222870591553559",
   },
   {
+    handle: "@ryancarson",
+    name: "Ryan Carson",
+    text: "Holy shit.   Now I've truly seen the light with @openclaw.  This is not a toy or a shiny object.  This is how you'll \"hire\" engineers in the future.  It's setup on my iMac next to me, with it's own github account, vercel",
+    likes: 1999,
+    reposts: 118,
+    url: "https://x.com/ryancarson/status/2018343411087016048",
+  },
+  {
+    handle: "@jeiting",
+    name: "Jacob Eiting",
+    text: "I've become pretty agent brained over the last 72 hours. Here are some observations.  What makes @openclaw  different:  1. Self-modification, the fact that it can edit its own prompts, let's you collaborate with it to en",
+    likes: 914,
+    reposts: 77,
+    url: "https://x.com/jeiting/status/2016564079154839640",
+  },
+  {
+    handle: "@wes_sander",
+    name: "Wes Sander",
+    text: "I'm amazed how many people don't get the power of @openclaw Every day I get a morning briefing based on my schedule, today I had an interview so it researched the company and the role and created a prep doc based on my r",
+    likes: 421,
+    reposts: 39,
+    url: "https://x.com/wes_sander/status/2023963116124422461",
+  },
+]
+
+const tweetsBottom: Tweet[] = [
+  {
+    handle: "@steipete",
+    name: "Peter Steinberger 🦞",
+    text: "@hznus @openclaw @AlexFinn Guardrails: - enable sandbox - enable white-list if you want to run commands out of it - read security doc - use model that has best-what-we-have prompt inject defense - run `clawdbot security",
+    likes: 1855,
+    reposts: 129,
+    url: "https://x.com/steipete/status/2015266538371125727",
+  },
+  {
+    handle: "@MiniMax_AI",
+    name: "MiniMax (official)",
+    text: "🦞To run a good Clawdbot, you need a model that has Trader Joes quality, Amazon Prime speed, and Temu prices.  🦞Here's how to get Clawdbot up and running with ClawdBotFather @steipete's personally recommended model, ✨M2.1",
+    likes: 1417,
+    reposts: 124,
+    url: "https://x.com/MiniMax_AI/status/2014380057301811685",
+  },
+  {
+    handle: "@vitl2907",
+    name: "Vitaly Bulatov",
+    text: "AI agents can now control robots!   For ClawCon, we integrated @openclaw and @rosorg - the largest open-source robotics stack powering millions of robots worldwide.  If you had an autonomous agent IRL, what would you mak",
+    likes: 720,
+    reposts: 107,
+    url: "https://x.com/vitl2907/status/2019323636335997024",
+  },
+  {
+    handle: "@_vgnsh",
+    name: "Vignesh",
+    text: "A thread about what I've been doing to calm down some egregious security claims that have been posted about @openclaw over the weekend.   Clawdbot is powerful software with a lot of sharp edges. Please read the security",
+    likes: 413,
+    reposts: 50,
+    url: "https://x.com/_vgnsh/status/2016015059521306827",
+  },
+  {
+    handle: "@emcro",
+    name: "Emmanuel Crouvisier",
+    text: "I’ve become worse than a CrossFit bro or a Vegan since I set up @openclaw last week.  Nearly everyone I talk to now I ask “do you claw?”  Not overhyped at all if you empower it and let it be proactive. The more access an",
+    likes: 400,
+    reposts: 35,
+    url: "https://x.com/emcro/status/2018295105333903406",
+  },
+  {
+    handle: "@davemorin",
+    name: "Dave Morin 🦞",
+    text: "At this point I don't even know what to call @openclaw. It is something new. After a few weeks in with it, this is the first time I have felt like I am living in the future since the launch of ChatGPT.",
+    likes: 387,
+    reposts: 23,
+    url: "https://x.com/davemorin/status/2013723700668096605",
+  },
+  {
+    handle: "@astuyve",
+    name: "AJ Stuyvenberg",
+    text: "Clawdbot just saved me $4,200 on a car https://t.co/VsDRDnvChR",
+    likes: 558,
+    reposts: 20,
+    url: "https://x.com/astuyve/status/2014147784098681217",
+  },
+  {
+    handle: "@josesaezmerino",
+    name: "Jose",
+    text: "My Clawdbot lives in a Mac mini inside a G4 iMac. I asked it to create an animated face for itself and it just did it. Even added a sleeping animation I didn’t ask for initially.  Incredible @steipete https://t.co/gjL8g9",
+    likes: 6149,
+    reposts: 323,
+    url: "https://x.com/josesaezmerino/status/2015893535522770956",
+  },
+  {
+    handle: "@flaviocopes",
+    name: "flavio",
+    text: "“Mom, how did we get so rich?”    “Your father bought a Mac Mini to run @openclaw in 2026\" https://t.co/XpiR90CIpm",
+    likes: 633,
+    reposts: 33,
+    url: "https://x.com/flaviocopes/status/2014653140977541540",
+  },
+  {
     handle: "@davemorin",
     name: "Dave Morin 🦞",
     text: "🦞 Been working with Peter Steinberger (@steipete) on the OpenClaw Foundation structure for weeks. A home for thinkers and hackers and those that want to own their data. Honored to serve as the founding independent board",
     likes: 2735,
     reposts: 164,
     url: "https://x.com/davemorin/status/2023171737949442301",
-  },
-  {
-    handle: "@CamaradaVini",
-    name: "Vini 💢⚪️⚫️",
-    text: "@openclaw https://t.co/htIczR3AVx",
-    likes: 2069,
-    reposts: 156,
-    url: "https://x.com/CamaradaVini/status/2017108388992123383",
-  },
-  {
-    handle: "@ryancarson",
-    name: "Ryan Carson",
-    text: "Holy shit.   Now I've truly seen the light with @openclaw.  This is not a toy or a shiny object.  This is how you'll \"hire\" engineers in the future.  It's setup on my iMac next to me, with it's own github account, verc",
-    likes: 1999,
-    reposts: 118,
-    url: "https://x.com/ryancarson/status/2018343411087016048",
   },
 ]
 
@@ -250,7 +250,7 @@ export function TweetsMarqueeSection() {
       <div ref={contentRef} className="mx-auto mb-12 max-w-6xl px-6 md:px-12 lg:px-20">
         <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">OpenClaw Buzz</p>
         <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
-          Real user posts from X raving about OpenClaw — all with 300+ likes.
+          Real user posts about OpenClaw features and use cases — all with 300+ likes.
         </h2>
       </div>
 
