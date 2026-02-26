@@ -250,7 +250,7 @@ export function TweetsMarqueeSection() {
       <div ref={contentRef} className="mx-auto mb-12 max-w-6xl px-6 md:px-12 lg:px-20">
         <p className="mb-3 text-xs uppercase tracking-[0.35em] text-white/50">OpenClaw Buzz</p>
         <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
-          Real user posts about OpenClaw features and use cases — all with 300+ likes.
+          The hype is real — builders are shipping wild things with OpenClaw.
         </h2>
       </div>
 
