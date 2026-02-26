@@ -17,12 +17,12 @@ interface Tweet {
 
 const tweetsTop: Tweet[] = [
   {
-    handle: "@openclaw",
-    name: "OpenClaw 🦞",
-    text: "The lobster has molted into its final form 🦞  Clawd → Moltbot → OpenClaw  100k+ GitHub stars. 2M visitors in a week. And finally, a name that'll stick.  Your assistant. Your machine. Your rules. https://t.co/d39LXKRE9h",
-    likes: 15427,
-    reposts: 1428,
-    url: "https://x.com/openclaw/status/2017103710959075434",
+    handle: "@steipete",
+    name: "Peter Steinberger",
+    text: "Happy 3 months anniversary to @openclaw! Back then it was called Warelay (WhatsApp relay). Thanks to all the contributors making this project special 🦞",
+    likes: 3134,
+    reposts: 494,
+    url: "https://x.com/steipete/status/2026474687576916024",
   },
   {
     handle: "@openclaw",
@@ -100,12 +100,12 @@ const tweetsTop: Tweet[] = [
 
 const tweetsBottom: Tweet[] = [
   {
-    handle: "@openclaw",
-    name: "OpenClaw 🦞",
-    text: "🦞 BIG NEWS: We've molted!  Clawdbot → Moltbot Clawd → Molty  Same lobster soul, new shell. Anthropic asked us to change our name (trademark stuff), and honestly? \"Molt\" fits perfectly - it's what lobsters do to grow.  Ne",
-    likes: 14064,
-    reposts: 1191,
-    url: "https://x.com/openclaw/status/2016058924403753024",
+    handle: "@davemorin",
+    name: "Dave Morin",
+    text: "Been working with Peter Steinberger (@steipete) on the OpenClaw Foundation strategy. The pace and community momentum are wild.",
+    likes: 2769,
+    reposts: 494,
+    url: "https://x.com/davemorin/status/2023171737949442301",
   },
   {
     handle: "@openclaw",
