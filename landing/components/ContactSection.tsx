@@ -10,6 +10,8 @@ export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const formRef = useRef<HTMLFormElement>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const headingBlockRef = useRef<HTMLDivElement>(null)
 
@@ -57,9 +59,40 @@ export function ContactSection() {
     return () => ctx.revert()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setError(null)
+    setSubmitting(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      challenge: String(formData.get("challenge") ?? ""),
+    }
+
+    try {
+      const res = await fetch("/api/demo-requests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || "Failed to submit")
+      }
+
+      setSubmitted(true)
+      form.reset()
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to submit")
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -151,15 +184,17 @@ export function ContactSection() {
           <div className="flex flex-col gap-3">
             <button
               type="submit"
-              className="mechanical w-full border-2 border-white/90 bg-white px-6 py-5 text-base font-semibold text-black"
+              disabled={submitting}
+              className="mechanical w-full border-2 border-white/90 bg-white px-6 py-5 text-base font-semibold text-black disabled:cursor-not-allowed disabled:opacity-60"
             >
-Book Implementation Call
+              {submitting ? "Submitting..." : "Book Implementation Call"}
             </button>
             {submitted ? (
               <p className="text-sm text-white/50">
-We&apos;ve received your request. A Saber team member will reach out with your OpenClaw implementation plan.
+                We&apos;ve received your request. A Saber team member will reach out with your OpenClaw implementation plan.
               </p>
             ) : null}
+            {error ? <p className="text-sm text-red-300">{error}</p> : null}
           </div>
         </form>
       </div>
