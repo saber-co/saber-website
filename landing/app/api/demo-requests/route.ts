@@ -16,9 +16,11 @@ export async function POST(req: Request) {
     }
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+    const supabaseAnonOrPublishableKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const supabaseKey = supabaseServiceRoleKey || supabaseAnonOrPublishableKey
 
-    if (!supabaseUrl || !supabaseAnonKey) {
+    if (!supabaseUrl || !supabaseKey) {
       return NextResponse.json({ error: "Supabase is not configured" }, { status: 500 })
     }
 
@@ -34,8 +36,8 @@ export async function POST(req: Request) {
     const res = await fetch(`${supabaseUrl}/rest/v1/${TABLE}`, {
       method: "POST",
       headers: {
-        apikey: supabaseAnonKey,
-        Authorization: `Bearer ${supabaseAnonKey}`,
+        apikey: supabaseKey,
+        Authorization: `Bearer ${supabaseKey}`,
         "Content-Type": "application/json",
         Prefer: "return=minimal",
       },
