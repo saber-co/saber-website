@@ -72,6 +72,7 @@ export function ContactSection() {
       company: String(formData.get("company") ?? ""),
       email: String(formData.get("email") ?? ""),
       challenge: String(formData.get("challenge") ?? ""),
+      website: String(formData.get("website") ?? ""),
     }
 
     try {
@@ -178,6 +179,18 @@ export function ContactSection() {
               required
               placeholder="What's your biggest operational bottleneck? (e.g., slow lead response, manual data entry, after-hours coverage)"
               className="flex-1 w-full border-2 border-white/80 bg-[#0a0a0a] px-5 py-4 text-base text-white placeholder:text-white/35 focus:outline-none focus:border-red-500/60 resize-none"
+            />
+          </div>
+
+          {/* Honeypot field for bots; real users should never see or fill this. */}
+          <div className="hidden" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
             />
           </div>
 
