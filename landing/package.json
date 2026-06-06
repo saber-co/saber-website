@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cd .. && pnpm --filter @workspace/landing run build && rm -rf landing/dist && mkdir -p landing/dist && cp -R artifacts/landing/dist/public/. landing/dist/"
+    "build": "npx -y pnpm@9.15.9 -C .. install --frozen-lockfile && npx -y pnpm@9.15.9 -C .. --filter @workspace/landing run build && rm -rf dist && mkdir -p dist && cp -R ../artifacts/landing/dist/public/. dist/"
   }
 }
