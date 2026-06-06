@@ -1,0 +1,8 @@
+{
+  "name": "saber-website-vercel-root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd .. && pnpm --filter @workspace/landing run build && rm -rf landing/dist && mkdir -p landing/dist && cp -R artifacts/landing/dist/public/. landing/dist/"
+  }
+}
