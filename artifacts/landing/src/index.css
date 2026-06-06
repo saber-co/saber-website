@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-space-grotesk: "Space Grotesk";
+  --font-public-sans: "Public Sans";
+  --font-geist-mono: "Geist Mono";
+  --background: #ffffff;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --card-foreground: #18181b;
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+  --primary: #dc2626;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #dc2626;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border: rgba(9, 9, 11, 0.08);
+  --input: rgba(9, 9, 11, 0.12);
+  --ring: #dc2626;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #18181b;
+  --sidebar-primary: #dc2626;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #18181b;
+  --sidebar-border: rgba(9, 9, 11, 0.08);
+  --sidebar-ring: #dc2626;
+}
+
+@theme inline {
+  --font-sans: var(--font-public-sans), "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background:
+      radial-gradient(900px 600px at 50% -10%, rgba(220, 38, 38, 0.06), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #fbfbfa 100%);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+  ::selection {
+    background: #dc2626;
+    color: #ffffff;
+  }
+
+  /* Page rails — subtle vertical guide lines, Browserbase-style */
+  .page-rails {
+    position: relative;
+  }
+  .page-rails::before,
+  .page-rails::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(9, 9, 11, 0.06);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .page-rails::before {
+    left: max(1.5rem, calc(50% - 600px));
+  }
+  .page-rails::after {
+    right: max(1.5rem, calc(50% - 600px));
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: #18181b;
+    color: #ffffff;
+    font-weight: 600;
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 1px 2px rgba(9, 9, 11, 0.12);
+  }
+  .btn-primary:hover {
+    background: #000000;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(9, 9, 11, 0.18);
+  }
+  .btn-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: #dc2626;
+    color: #ffffff;
+    font-weight: 600;
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 1px 2px rgba(220, 38, 38, 0.25);
+  }
+  .btn-accent:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(220, 38, 38, 0.28);
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #18181b;
+    font-weight: 600;
+    border: 1px solid rgba(9, 9, 11, 0.12);
+    transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  }
+  .btn-ghost:hover {
+    background: #fafafa;
+    border-color: rgba(9, 9, 11, 0.2);
+    transform: translateY(-1px);
+  }
+
+  /* Highlighted phrase behind hero headline */
+  .hl {
+    background: #dc2626;
+    color: #ffffff;
+    padding: 0.02em 0.18em;
+    border-radius: 0.3rem;
+    line-height: 1;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Cards */
+  .soft-card {
+    background: #ffffff;
+    border: 1px solid rgba(9, 9, 11, 0.08);
+    border-radius: var(--radius);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+  .soft-card:hover {
+    border-color: rgba(9, 9, 11, 0.14);
+    box-shadow: 0 12px 30px rgba(9, 9, 11, 0.07);
+    transform: translateY(-2px);
+  }
+
+  .telemetry-value {
+    display: inline-flex;
+    gap: 0;
+    align-items: baseline;
+    font-variant-numeric: tabular-nums;
+  }
+  .odometer-digit {
+    display: inline-block;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    width: 0.6em;
+  }
+  .odometer-stack {
+    display: block;
+    transform: translateY(0);
+    animation: odometer-roll 1s steps(10, end) forwards;
+  }
+  .odometer-stack span {
+    display: block;
+    height: 1em;
+  }
+  .odometer-digit[data-digit] .odometer-stack {
+    transform: translateY(calc(-1em * var(--digit)));
+  }
+  @keyframes odometer-roll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-1em * var(--digit)));
+    }
+  }
+
+  /* Marquee animations */
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-container::before,
+  .marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #fbfbfa 0%, transparent 100%);
+  }
+  .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #fbfbfa 0%, transparent 100%);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+  }
+  .marquee-left {
+    animation: marquee-scroll-left 50s linear infinite;
+  }
+  .marquee-right {
+    animation: marquee-scroll-right 55s linear infinite;
+  }
+  .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee-scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee-scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-left,
+    .marquee-right {
+      animation: none !important;
+    }
+    .odometer-stack {
+      animation: none !important;
+    }
+  }
+}

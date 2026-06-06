@@ -1,0 +1,2 @@
+- [Vercel→Vite migration](vercel-vite-migration.md) — how the Saber landing page was ported from Next.js; what was dropped and the non-obvious conversion gotchas.
+- [Saber light theme](saber-light-theme.md) — landing is now a clean light theme; design tokens, custom utility classes, and the canvas agent graph live here.

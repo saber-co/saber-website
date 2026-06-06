@@ -1,0 +1,25 @@
+{
+  "framework": "vite",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/landing run build",
+  "outputDirectory": "artifacts/landing/dist/public",
+  "rewrites": [
+    {
+      "source": "/dashboard/:path*",
+      "destination": "http://137.184.109.48:8080/dashboard/:path*"
+    },
+    {
+      "source": "/t/:path*",
+      "destination": "http://137.184.109.48:8080/t/:path*"
+    },
+    {
+      "source": "/zoho/oauth/callback",
+      "destination": "http://137.184.109.48:8080/zoho/oauth/callback"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "http://137.184.109.48:8080/assets/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
