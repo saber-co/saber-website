@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { SaberLogo } from "./SaberLogo"
 import {
   CreateDemoRequestBody,
   createDemoRequestBodyNameMax,
@@ -117,29 +118,25 @@ export function ContactSection() {
     >
       <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div ref={headingBlockRef}>
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.28em] text-[#dc2626]">
-            Implementation inquiry
-          </p>
-          <h2 className="mb-3 text-balance font-display text-4xl font-semibold tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
-            Book your AI agent implementation call.
+          <p className="kicker mb-5">Start a project</p>
+          <h2 className="mb-4 text-balance font-display text-4xl font-medium tracking-tight text-ink md:text-6xl">
+            Let&apos;s build your <span className="ink-italic">agent.</span>
           </h2>
-          <p className="mb-4 text-base leading-relaxed text-zinc-600">
-            Tell us your biggest operational bottleneck. We&apos;ll show you exactly how we implement AI agents for your workflows in your own environment.
+          <p className="mb-5 text-base leading-relaxed text-ink/70">
+            Tell us the workflow that&apos;s eating your team&apos;s time. We&apos;ll
+            show you exactly what an AI agent would own — and how it runs in your
+            own environment.
           </p>
-          <div className="mb-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-400">
-            <span>Free workflow audit included</span>
-            <span>&middot;</span>
-            <span>Live in 7 days</span>
-            <span>&middot;</span>
+          <div className="mb-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/45">
+            <span>Free workflow audit</span>
+            <span aria-hidden>&middot;</span>
+            <span>Runs in your infra</span>
+            <span aria-hidden>&middot;</span>
             <span>No commitment</span>
           </div>
         </div>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="flex flex-1 flex-col gap-6"
-        >
+        <form ref={formRef} onSubmit={handleSubmit} className="flex flex-1 flex-col gap-6">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div>
               <label htmlFor="name" className="sr-only">Name</label>
@@ -150,7 +147,7 @@ export function ContactSection() {
                 required
                 maxLength={createDemoRequestBodyNameMax}
                 placeholder="Your name"
-                className="w-full rounded-xl border border-black/[0.12] bg-white px-5 py-4 text-base text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[#dc2626] focus:outline-none focus:ring-2 focus:ring-[#dc2626]/15"
+                className="field"
               />
             </div>
             <div>
@@ -162,7 +159,7 @@ export function ContactSection() {
                 required
                 maxLength={createDemoRequestBodyCompanyMax}
                 placeholder="Company name"
-                className="w-full rounded-xl border border-black/[0.12] bg-white px-5 py-4 text-base text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[#dc2626] focus:outline-none focus:ring-2 focus:ring-[#dc2626]/15"
+                className="field"
               />
             </div>
           </div>
@@ -176,19 +173,19 @@ export function ContactSection() {
               required
               maxLength={createDemoRequestBodyEmailMax}
               placeholder="Work email"
-              className="w-full rounded-xl border border-black/[0.12] bg-white px-5 py-4 text-base text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[#dc2626] focus:outline-none focus:ring-2 focus:ring-[#dc2626]/15"
+              className="field"
             />
           </div>
 
           <div className="flex flex-1 flex-col">
-            <label htmlFor="challenge" className="sr-only">Biggest operational bottleneck</label>
+            <label htmlFor="challenge" className="sr-only">The workflow you want an agent to own</label>
             <textarea
               id="challenge"
               name="challenge"
               required
               maxLength={createDemoRequestBodyChallengeMax}
-              placeholder="What's your biggest operational bottleneck? (e.g., slow lead response, manual data entry, after-hours coverage)"
-              className="min-h-[160px] w-full flex-1 resize-none rounded-xl border border-black/[0.12] bg-white px-5 py-4 text-base text-zinc-900 placeholder:text-zinc-400 transition-colors focus:border-[#dc2626] focus:outline-none focus:ring-2 focus:ring-[#dc2626]/15"
+              placeholder="What workflow do you want an agent to own? (e.g., slow lead response, manual reporting, after-hours coverage)"
+              className="field min-h-[160px] flex-1 resize-none"
             />
           </div>
 
@@ -196,32 +193,29 @@ export function ContactSection() {
             <button
               type="submit"
               disabled={submitting}
-              className="btn-accent w-full px-6 py-4 text-base disabled:cursor-not-allowed disabled:opacity-60"
+              className="btn-vermilion w-full px-6 py-4 text-sm disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {submitting ? "Submitting..." : "Book Implementation Call"}
+              {submitting ? "Sending..." : "Start the conversation"}
             </button>
             {submitted ? (
-              <p className="text-sm text-zinc-600">
-                We&apos;ve received your request. A Saber team member will reach out with your AI agent implementation plan.
+              <p className="text-sm text-ink/70">
+                We&apos;ve received your request. A Saber team member will reach out
+                with a plan for your agent.
               </p>
             ) : null}
-            {error ? <p className="text-sm text-[#dc2626]">{error}</p> : null}
+            {error ? <p className="text-sm text-[#b42318]">{error}</p> : null}
           </div>
         </form>
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 mx-auto mt-28 flex w-full max-w-[1200px] flex-col items-center justify-between gap-3 border-t border-black/[0.08] pt-6 sm:flex-row">
-        <div className="flex items-center gap-2.5">
-          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#dc2626] text-xs font-bold text-white">
-            S
-          </span>
-          <span className="font-display text-sm font-bold tracking-tight text-zinc-900">
-            Saber
-          </span>
-        </div>
-        <p className="text-xs text-zinc-400">
-          &copy; {new Date().getFullYear()} Saber. All rights reserved.
+      <div className="relative z-10 mx-auto mt-28 flex w-full max-w-[1200px] flex-col items-center justify-between gap-3 border-t border-ink/15 pt-6 sm:flex-row">
+        <SaberLogo
+          markClassName="h-6 w-6 text-ink"
+          wordClassName="font-display text-base font-semibold tracking-tight text-ink"
+        />
+        <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/45">
+          &copy; {new Date().getFullYear()} Saber &middot; We build AI agents for you
         </p>
       </div>
     </section>

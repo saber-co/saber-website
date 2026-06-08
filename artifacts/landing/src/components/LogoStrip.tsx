@@ -1,29 +1,30 @@
-const logos = [
-  "Founders Inc",
-  "University of Cincinnati",
-  "Cerebral Valley",
-  "Network School",
+const founders = [
+  { name: "Founders Inc", src: "/logos/foundersinc.png", className: "h-9" },
+  { name: "Cerebral Valley", src: "/logos/cerebralvalley.svg", className: "h-9" },
+  { name: "Stanford", src: "/logos/stanford-wordmark.png", className: "h-5" },
+  { name: "Network School", src: "/logos/networkschool.svg", className: "h-4" },
 ]
 
 export function LogoStrip() {
   return (
-    <section className="page-rails relative border-y border-black/[0.07] bg-[#fbfbfa]">
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-12 md:py-16">
-        <p className="mb-8 text-center text-sm font-medium text-zinc-500">
-          Founders from
-        </p>
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-black/[0.07] bg-black/[0.06] sm:grid-cols-4">
-          {logos.map((name) => (
-            <div
-              key={name}
-              className="flex items-center justify-center gap-2 bg-white px-4 py-7"
-            >
-              <span className="h-5 w-5 rounded-md bg-zinc-200" aria-hidden="true" />
-              <span className="font-display text-base font-semibold tracking-tight text-zinc-400">
-                {name}
-              </span>
-            </div>
-          ))}
+    <section className="page-rails relative border-y border-ink/15 bg-[#ece5d4]">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-10 md:py-12">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+          <p className="mono-label shrink-0 text-center md:max-w-[150px] md:text-left">
+            Founders from
+          </p>
+          <div className="grid w-full grid-cols-2 items-center gap-x-8 gap-y-10 sm:grid-cols-4">
+            {founders.map((f) => (
+              <div key={f.name} className="group flex items-center justify-center">
+                <img
+                  src={f.src}
+                  alt={`${f.name} logo`}
+                  className={`${f.className} w-auto max-w-full object-contain opacity-55 grayscale transition-all duration-300 group-hover:opacity-90 group-hover:grayscale-0`}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

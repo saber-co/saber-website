@@ -11,22 +11,22 @@ const stats = [
     value: 87,
     suffix: "%",
     decimals: 0,
-    label: "of leads lost due to response times over 5 minutes",
+    label: "of inbound leads go cold when the first reply takes longer than five minutes",
     source: "Harvard Business Review",
   },
   {
-    value: 4.5,
-    suffix: " hrs",
-    decimals: 1,
-    label: "per week wasted on tasks employees say should be automated",
-    source: "Automation Anywhere",
+    value: 40,
+    suffix: "%",
+    decimals: 0,
+    label: "of the average team's week goes to repetitive work that never needed a human",
+    source: "McKinsey Global Institute",
   },
   {
     value: 100,
     suffix: "%",
     decimals: 0,
-    label: "AI agents deployed in your own environment and controls",
-    source: "Saber Implementation Standard",
+    label: "of every agent we build runs inside your own infrastructure and data boundary",
+    source: "Saber build standard",
   },
 ]
 
@@ -109,7 +109,7 @@ export function StatsSection() {
             </span>
           )
         })}
-        {stat.suffix ? <span>{stat.suffix}</span> : null}
+        {stat.suffix ? <span className="text-vermilion">{stat.suffix}</span> : null}
       </span>
     )
   }
@@ -117,29 +117,23 @@ export function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      id="stats"
+      id="problem"
       className="page-rails relative px-6 pt-20 pb-24 md:px-12 lg:px-20"
     >
       <div className="relative z-10 mx-auto max-w-[1200px]">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.28em] text-[#dc2626]">
-          The problem
-        </p>
-        <h2 className="mb-12 max-w-2xl font-display text-3xl font-semibold tracking-tight text-zinc-900 md:text-4xl">
-          Your team is losing deals while doing busywork.
+        <p className="kicker mb-4">The problem</p>
+        <h2 className="mb-12 max-w-2xl font-display text-3xl font-medium tracking-tight text-ink md:text-5xl">
+          Your team is doing work an AI agent could already own.
         </h2>
-        <div ref={gridRef} className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="soft-card px-7 py-7"
-            >
-              <div className="font-display text-5xl font-semibold text-zinc-900 md:text-6xl">
+        <div ref={gridRef} className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {stats.map((stat, i) => (
+            <div key={stat.label} className="flat-card flex flex-col px-7 py-7">
+              <span className="mono-label mb-5">{String(i + 1).padStart(2, "0")} / 03</span>
+              <div className="font-display text-6xl font-medium text-ink md:text-7xl">
                 {renderOdometer(stat)}
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-600">
-                {stat.label}
-              </p>
-              <p className="mt-4 text-[10px] uppercase tracking-[0.18em] text-zinc-400">
+              <p className="mt-5 text-sm leading-relaxed text-ink/70">{stat.label}</p>
+              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40">
                 Source: {stat.source}
               </p>
             </div>

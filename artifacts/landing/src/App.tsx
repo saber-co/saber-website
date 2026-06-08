@@ -2,8 +2,9 @@ import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { LogoStrip } from "@/components/LogoStrip";
 import { StatsSection } from "@/components/StatsSection";
-import { TweetsMarqueeSection } from "@/components/TweetsMarqueeSection";
 import { FeatureBubblesSection } from "@/components/FeatureBubblesSection";
+import { MetricsSection } from "@/components/MetricsSection";
+import { VoicesSection } from "@/components/VoicesSection";
 import { ContactSection } from "@/components/ContactSection";
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       <Hero />
       <LogoStrip />
       <StatsSection />
-      <TweetsMarqueeSection />
       <FeatureBubblesSection />
+      <MetricsSection />
+      <VoicesSection />
       <ContactSection />
     </main>
   );
