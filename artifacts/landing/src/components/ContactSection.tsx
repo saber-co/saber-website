@@ -118,14 +118,14 @@ export function ContactSection() {
     >
       <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col">
         <div ref={headingBlockRef}>
-          <p className="kicker mb-5">Start a project</p>
+          <p className="kicker mb-5">Start a rollout</p>
           <h2 className="mb-4 text-balance font-display text-4xl font-medium tracking-tight text-ink md:text-6xl">
-            Let&apos;s build your <span className="ink-italic">agent.</span>
+            Let&apos;s map your <span className="ink-italic">operator.</span>
           </h2>
           <p className="mb-5 text-base leading-relaxed text-ink/70">
             Tell us the workflow that&apos;s eating your team&apos;s time. We&apos;ll
-            show you exactly what an AI agent would own — and how it runs in your
-            own environment.
+            show you exactly what a Scroll operator would own, what still needs
+            approval, and how the rollout fits your current systems.
           </p>
           <div className="mb-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/45">
             <span>Free workflow audit</span>
@@ -178,13 +178,13 @@ export function ContactSection() {
           </div>
 
           <div className="flex flex-1 flex-col">
-            <label htmlFor="challenge" className="sr-only">The workflow you want an agent to own</label>
+            <label htmlFor="challenge" className="sr-only">The workflow you want a Scroll operator to own</label>
             <textarea
               id="challenge"
               name="challenge"
               required
               maxLength={createDemoRequestBodyChallengeMax}
-              placeholder="What workflow do you want an agent to own? (e.g., slow lead response, manual reporting, after-hours coverage)"
+              placeholder="What workflow do you want Scroll to own? (e.g., slow lead response, manual reporting, after-hours coverage)"
               className="field min-h-[160px] flex-1 resize-none"
             />
           </div>
@@ -195,12 +195,12 @@ export function ContactSection() {
               disabled={submitting}
               className="btn-vermilion w-full px-6 py-4 text-sm disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {submitting ? "Sending..." : "Start the conversation"}
+              {submitting ? "Sending..." : "Request rollout plan"}
             </button>
             {submitted ? (
               <p className="text-sm text-ink/70">
-                We&apos;ve received your request. A Saber team member will reach out
-                with a plan for your agent.
+                We&apos;ve received your request. The Scroll team will reach out
+                with a plan for your operator rollout.
               </p>
             ) : null}
             {error ? <p className="text-sm text-[#b42318]">{error}</p> : null}
@@ -215,7 +215,7 @@ export function ContactSection() {
           wordClassName="font-display text-base font-semibold tracking-tight text-ink"
         />
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/45">
-          &copy; {new Date().getFullYear()} Saber &middot; We build AI agents for you
+          &copy; {new Date().getFullYear()} Scroll &middot; AI operators for business workflows
         </p>
       </div>
     </section>

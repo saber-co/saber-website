@@ -7,15 +7,15 @@ gsap.registerPlugin(ScrollTrigger)
 const features = [
   {
     index: "01",
-    title: "Persistent memory",
+    title: "Persistent workflow memory",
     description:
-      "Your agent remembers your accounts, tools, and past decisions — and gets sharper the longer it runs alongside your team.",
+      "Your operator remembers accounts, tools, and past decisions so the same workflow gets cleaner every time it runs.",
   },
   {
     index: "02",
-    title: "Builds its own skills",
+    title: "Reusable operating skills",
     description:
-      "After each task it writes reusable playbooks, so work it figures out once it can repeat reliably from then on.",
+      "Once Scroll figures out a playbook, it turns that process into a repeatable run with clear checkpoints.",
   },
   {
     index: "03",
@@ -27,7 +27,7 @@ const features = [
     index: "04",
     title: "Works where your team is",
     description:
-      "Slack, Discord, Telegram, WhatsApp, and email — one agent across every channel, carrying full context.",
+      "Slack, Discord, Telegram, WhatsApp, and email — one operator layer across every channel, carrying full context.",
   },
   {
     index: "05",
@@ -82,11 +82,11 @@ export function FeatureBubblesSection() {
           <div>
             <p className="kicker">Capabilities</p>
             <h2 className="mt-4 max-w-xl font-display text-3xl font-medium tracking-tight text-ink md:text-5xl">
-              One agent, shaped around how your team actually works.
+              One operator layer, shaped around how your team actually works.
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-ink/65 lg:max-w-xs lg:text-right">
-            We design, build, and operate it end to end — you get the outcomes
+            Scroll designs, builds, and operates it end to end — you get the outcomes
             without standing up an ML team.
           </p>
         </div>
@@ -116,7 +116,7 @@ export function FeatureBubblesSection() {
 
         <div className="mt-12 flex justify-center">
           <a href="#contact" className="btn-outline px-7 py-3.5">
-            Start a project
+            Start a rollout
           </a>
         </div>
       </div>

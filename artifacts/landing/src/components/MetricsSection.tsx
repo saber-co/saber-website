@@ -26,7 +26,7 @@ const tickStyle = {
 
 const responseData = [
   { label: "Before", minutes: 312 },
-  { label: "With agent", minutes: 0.5 },
+  { label: "With Scroll", minutes: 0.5 },
 ]
 
 const reclaimedData = [
@@ -80,11 +80,11 @@ export function MetricsSection() {
       <div className="relative z-10 mx-auto max-w-[1200px]">
         <p className="kicker mb-4">By the numbers</p>
         <h2 className="max-w-2xl font-display text-3xl font-medium tracking-tight text-ink md:text-5xl">
-          What changes once your agent goes live.
+          What changes once your Scroll operator goes live.
         </h2>
         <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink/65">
-          Plain charts, no spin. These are the patterns we see across Saber
-          builds in the first two quarters.
+          Plain charts, no spin. These are the patterns Scroll targets during
+          the first two quarters of an operator rollout.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -147,7 +147,7 @@ export function MetricsSection() {
                   {responseData.map((entry) => (
                     <Cell
                       key={entry.label}
-                      fill={entry.label === "With agent" ? BRAND : INK}
+                      fill={entry.label === "With Scroll" ? BRAND : INK}
                     />
                   ))}
                 </Bar>
@@ -195,7 +195,7 @@ export function MetricsSection() {
         </div>
 
         <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.16em] text-ink/40">
-          Figures illustrate typical outcomes across Saber builds, not a guarantee.
+          Figures illustrate typical outcomes across Scroll rollouts, not a guarantee.
         </p>
       </div>
     </section>

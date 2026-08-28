@@ -25,8 +25,8 @@ const stats = [
     value: 100,
     suffix: "%",
     decimals: 0,
-    label: "of every agent we build runs inside your own infrastructure and data boundary",
-    source: "Saber build standard",
+    label: "of customer-facing actions stay approval-gated in the default rollout",
+    source: "Scroll build standard",
   },
 ]
 
@@ -123,7 +123,7 @@ export function StatsSection() {
       <div className="relative z-10 mx-auto max-w-[1200px]">
         <p className="kicker mb-4">The problem</p>
         <h2 className="mb-12 max-w-2xl font-display text-3xl font-medium tracking-tight text-ink md:text-5xl">
-          Your team is doing work an AI agent could already own.
+          Your team is doing work a Scroll operator could already own.
         </h2>
         <div ref={gridRef} className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {stats.map((stat, i) => (

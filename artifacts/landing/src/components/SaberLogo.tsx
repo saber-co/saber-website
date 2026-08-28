@@ -38,7 +38,7 @@ export function SaberLogo({
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <SaberMark className={markClassName} />
-      <span className={wordClassName}>Saber</span>
+      <span className={wordClassName}>Scroll</span>
     </span>
   )
 }

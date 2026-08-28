@@ -28,7 +28,7 @@ export function Nav() {
         }`}
       >
         <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
-          <a href="#top" aria-label="Saber home">
+          <a href="#top" aria-label="Scroll home">
             <SaberLogo />
           </a>
 
@@ -46,7 +46,7 @@ export function Nav() {
 
           <div className="flex items-center gap-3">
             <a href="#contact" className="btn-ink px-4 py-2">
-              Book a call
+              Book a demo
             </a>
           </div>
         </nav>
