@@ -31,8 +31,8 @@ export function SiteHeader() {
       className={`${styles.header} ${hasPassedHero ? styles.headerSolid : ""}`}
       ref={headerRef}
     >
-      <Link className={styles.wordmark} href="#top" aria-label="Kural home">
-        KURAL
+      <Link className={styles.wordmark} href="#top" aria-label="Saber home">
+        SABER
       </Link>
       <nav className={styles.nav} aria-label="Primary navigation">
         <Link href="#product">Product</Link>

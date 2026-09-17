@@ -13,28 +13,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Kural — Modular mobile manipulation";
+const title = "Saber — Modular mobile manipulation";
 const description =
-  "Meet Kural, a modular mobile manipulator built to move, see, reach, and adapt across everyday spaces.";
+  "Meet Saber, a modular mobile manipulator built to move, see, reach, and adapt across everyday spaces.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.saber.company"),
   title,
   description,
-  applicationName: "Kural",
+  applicationName: "Saber",
   alternates: { canonical: "/" },
   openGraph: {
     title,
     description,
     url: "/",
-    siteName: "Kural",
+    siteName: "Saber",
     type: "website",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Kural — modular mobile manipulation",
+        alt: "Saber — modular mobile manipulation",
       },
     ],
   },

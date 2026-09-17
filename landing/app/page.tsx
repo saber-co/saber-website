@@ -104,7 +104,7 @@ export default function Home() {
 
         <div className={styles.heroShade} aria-hidden="true" />
         <div className={styles.heroCopy}>
-          <h1 id="hero-title">Introducing Kural</h1>
+          <h1 id="hero-title">Introducing Saber</h1>
           <p className={styles.heroSummary}>A modular mobile manipulator</p>
           <Link className={styles.heroCta} href="#early-access">Join waitlist</Link>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
           <p className={styles.eyebrow}>Built for the space between demos and daily life.</p>
           <h2>One machine.<br />Many kinds of work.</h2>
           <p className={styles.lead}>
-            Kural combines a mobile base, vertical lift, six-axis SO-101 arm,
+            Saber combines a mobile base, vertical lift, six-axis SO-101 arm,
             onboard vision, and interchangeable wrist tools. It moves to the
             task, reaches the right height, sees the workspace, and acts with
             the tool the moment requires.
@@ -137,7 +137,7 @@ export default function Home() {
         <div className={styles.reasoningIntro}>
           <div className={`${styles.sectionLabel} ${styles.sectionLabelDark}`}>
             <span>02</span>
-            <p>Why Kural</p>
+            <p>Why Saber</p>
           </div>
           <div>
             <p className={styles.eyebrowDark}>Robots should adapt to the room, not the other way around.</p>
@@ -145,13 +145,13 @@ export default function Home() {
           </div>
           <p>
             Most machines are built around one fixed motion in one fixed place.
-            Kural is designed as a system: mobile enough to move between work
+            Saber is designed as a system: mobile enough to move between work
             zones, tall enough to meet different surfaces, and modular enough
             to change what happens at the wrist.
           </p>
         </div>
 
-        <div className={styles.process} aria-label="How Kural works">
+        <div className={styles.process} aria-label="How Saber works">
           <article>
             <span>01</span>
             <Navigation aria-hidden="true" size={28} strokeWidth={1.6} />
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
           <h2>Change the tool.<br />Keep the platform.</h2>
           <p>
-            Kural’s wrist-roll interface lets one robot shift between handling,
+            Saber’s wrist-roll interface lets one robot shift between handling,
             cooking, illumination, and future task-specific tools.
           </p>
         </div>
@@ -228,7 +228,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <small>© 2026 Kural</small>
+        <small>© 2026 Saber</small>
       </footer>
     </main>
   );
