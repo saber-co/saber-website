@@ -1,25 +1,5 @@
 {
-  "framework": "vite",
+  "framework": "nextjs",
   "installCommand": "npx -y pnpm@9.15.9 -C .. install --frozen-lockfile",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/dashboard/:path*",
-      "destination": "http://137.184.109.48:8080/dashboard/:path*"
-    },
-    {
-      "source": "/t/:path*",
-      "destination": "http://137.184.109.48:8080/t/:path*"
-    },
-    {
-      "source": "/zoho/oauth/callback",
-      "destination": "http://137.184.109.48:8080/zoho/oauth/callback"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "http://137.184.109.48:8080/assets/:path*"
-    },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "buildCommand": "npx -y pnpm@9.15.9 -C .. --filter @workspace/landing run build"
 }
